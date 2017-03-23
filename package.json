@@ -1,0 +1,24 @@
+{
+  "name": "pg-workshop",
+  "version": "1.0.0",
+  "description": "A workshop to get familiar with postgres",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiryz/pg-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiryz/pg-workshop/issues"
+  },
+  "homepage": "https://github.com/shiryz/pg-workshop#readme",
+  "dependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
