@@ -4,7 +4,7 @@ function request (url, cb) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       cb(null, xhr.responseText);
     } else {
-      cb(err);
+      cb("error");
     }
   };
   xhr.open("GET", url, true);
@@ -15,14 +15,16 @@ function updateDom (err, data) {
   if (err) {
     console.log(err);
   } else {
-    var parent = document.getElemntById("users-table");
+    var parent = document.getElementById("users-table");
     var users = JSON.parse(data);
     users.forEach(function(user) {
       var row = document.createElement("tr");
-      var name = row.appendChild("td");
+      var name = document.createElement("td");
       name.innerHTML = user.name;
-      var location = row.appendChild("td");
+      var location = document.createElement("td");
+      row.appendChild(name);
       location.innerHTML = user.location;
+      row.appendChild(location);
       parent.appendChild(row);
     });
   }
