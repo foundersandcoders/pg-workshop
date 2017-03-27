@@ -11,6 +11,15 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 - Create a table called users with 3 columns.
 - Install the npm module `pg` , `npm install --save pg`.
 
+### Setting up the database
+
+- Connect to postgres, by typing `psql` in the terminal on MAC, and `sudo -u postgres psql` on ubuntu.
+- Create the database by typing `CREATE DATABASE [the name of the database];`.
+- Create a superuser with a password by typing `CREATE USER [the new username] WITH SUPERUSER PASSWORD '[the password of the database]';` (the password needs to be in quotes, otherwise you get an error).
+- Change ownership of the database to the new user by typing `ALTER DATABASE [name of the database] OWNER TO [the new username];`
+- Add a `config.env` file and add the database's url in this format:
+`DB_URL = postgres://[username]:[password]@localhost:5432/[database]`.
+
 ### Task 1
 
 In `src/handler.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `static.js` file. You can change the data in `static.js` and check the results.
