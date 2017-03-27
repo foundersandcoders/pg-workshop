@@ -7,8 +7,9 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 - Clone this repo
 - Run `npm run dev`in your terminal and checkout the result at [http://localhost:5000]. This is a preview of what you'll be building.
 - Create a database locally
-- Create a table called users with 3 columns: id, name, and location
-- Install the npm module `pg`
+- Add a users table.
+- Create a table called users with 3 columns.
+- Install the npm module `pg` , `npm install --save pg`.
 
 ### Task 1
 
