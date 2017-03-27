@@ -1,10 +1,11 @@
+/* generic XHR request */
 function request (url, cb) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       cb(null, xhr.responseText);
     } else {
-      cb("error");
+      cb("error" + xhr.responseType);
     }
   };
   xhr.open("GET", url, true);
@@ -15,14 +16,15 @@ function updateDom (err, data) {
   if (err) {
     console.log(err);
   } else {
-    var parent = document.getElementById("users-table");
     var users = JSON.parse(data);
+    var table = document.getElementById("users-table");
+    /* create a row in table for each user returned from DB */
     users.forEach(function(user) {
       var row = document.createElement("tr");
       var name = document.createElement("td");
       name.innerHTML = user.name;
-      var location = document.createElement("td");
       row.appendChild(name);
+      var location = document.createElement("td");
       location.innerHTML = user.location;
       row.appendChild(location);
       parent.appendChild(row);
