@@ -24,3 +24,13 @@ So far, we've only been dealing with `GET`ting data from a server. But what if w
 - Check that you can see an empty input box when you refresh your browser
 - Create a new handler function for the endpoint `create-user`. What kind of **method** do you think you'll need? How will you access the data from your form?
 - The data from your form should be used to `INSERT` a new row into your `users` table
+- What response will you show the user to let them know their data has been successfully dealt with? (there's no right or wrong answer here, although it's best if you give the user some helpful feedback!)
+
+## Bonus
+
+Customise your app!
+
+You could:
+- Add some new columns to your `users` table
+- Try and handle different types on input on the client side (e.g. boolean values or longer text input)
+- Validate input to check that the user does not already exist
