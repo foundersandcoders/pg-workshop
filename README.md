@@ -18,4 +18,9 @@ Your job is to refactor the handler so that the response data comes from the use
 
 ### Task 2
 
-So far, we've only been dealing with 'GET'ting data from a server. But what if we want to send some new data to our database instead?
+So far, we've only been dealing with `GET`ting data from a server. But what if we want to send some new data to our database instead?
+
+- Open up `index.html` and uncomment the form
+- Check that you can see an empty input box when you refresh your browser
+- Create a new handler function for the endpoint `create-user`. What kind of **method** do you think you'll need? How will you access the data from your form?
+- The data from your form should be used to `INSERT` a new row into your `users` table
