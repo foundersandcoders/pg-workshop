@@ -27,7 +27,7 @@ function updateDom (err, data) {
       var location = document.createElement("td");
       location.innerHTML = user.location;
       row.appendChild(location);
-      parent.appendChild(row);
+      table.appendChild(row);
     });
   }
 }
