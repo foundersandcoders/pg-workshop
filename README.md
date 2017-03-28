@@ -5,6 +5,7 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 ### Getting started
 
 - Clone this repo
+- Install the node_modules by typing `npm install` in your terminal.
 - Run `npm run dev`in your terminal and checkout the result at [http://localhost:5000]. This is a preview of what you'll be building.
 - Create a database locally
 - Add a users table.
