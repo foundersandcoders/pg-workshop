@@ -1,3 +1,7 @@
+**Author**: [@shiryz](https://github.com/shiryz)  
+
+**Maintainer**: TBC
+
 # pg-workshop
 
 In this workshop we'll be building on what we learnt in the [pg walkthrough](https://github.com/shiryz/pg-walkthrough). We'll be setting up our own database connection and using the data from a table of "users".
