@@ -28,7 +28,7 @@ Create a table called 'users' with three columns: 'id', 'name' and 'location' an
 
 **Hint: don't hard code the ids**
 
-Your job is to add to `db_connection.js` and refactor `handler.js` so that the response data comes from the users table in your database instead of from `static.js`.
+Your job is to add to `db_connection.js` and `dynamic.js` and refactor `handler.js` so that the response data comes from the users table in your database instead of from `static.js`.
 
 Once you've done this, move onto task 2.
 
