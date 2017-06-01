@@ -34,7 +34,7 @@ Your job is to refactor the handler so that the response data comes from the use
 - Check that you can see an empty input box when you refresh your browser
 - Try and get the design looking as close as possible to the below before moving on:
 
-![](https://preview.ibb.co/d3Hz8F/Css_challenge.png)
+![css-challenge](https://cloud.githubusercontent.com/assets/20152018/26682632/16e851ec-46d9-11e7-8249-3df2dd1cb057.png)
 
 ### Task 3
 
