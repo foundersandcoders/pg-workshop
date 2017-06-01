@@ -6,11 +6,8 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 
 - Clone this repo
 - Install the node_modules by typing `npm install` in your terminal.
-- Run `npm run dev`in your terminal and checkout the result at [http://localhost:5000]. This is a preview of what you'll be building.
-- Create a database locally
-- Add a users table.
-- Create a table called users with 3 columns.
-- Install the npm module `pg` , `npm install --save pg`.
+- Run `npm run dev`in your terminal and checkout the result at [http://localhost:5000]. This is the starting template for what you'll be building.
+- Install the npm modules `pg` and `env2`: `npm install --save pg env2`.
 
 ### Setting up the database
 
@@ -25,7 +22,15 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 
 In `src/handler.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `static.js` file. You can change the data in `static.js` and check the results.
 
-Your job is to refactor the handler so that the response data comes from the users table in your database instead of from `static.js`.
+In the terminal, connect to your database using `psql postgres://[username]:[password]@localhost:5432/[database]`.
+
+Create a table called 'users' with three columns: 'id', 'name' and 'location' and add a couple of rows of dummy data.
+
+**Hint: don't hard code the ids**
+
+Your job is to add to `db_connection.js` and refactor `handler.js` so that the response data comes from the users table in your database instead of from `static.js`.
+
+Once you've done this, move onto task 2.
 
 ### Task 2
 ** CSS Challenge! **

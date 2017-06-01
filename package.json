@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/shiryz/pg-workshop#readme",
   "dependencies": {
-    "nodemon": "^1.11.0"
+    "env2": "^2.2.0",
+    "nodemon": "^1.11.0",
+    "pg": "^6.2.3"
+  },
+  "devDependencies": {
+    "env2": "^2.2.0"
   }
 }
