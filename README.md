@@ -28,11 +28,18 @@ In `src/handler.js` you'll find a function that deals with calls to the `/users`
 Your job is to refactor the handler so that the response data comes from the users table in your database instead of from `static.js`.
 
 ### Task 2
-
-So far, we've only been dealing with `GET`ting data from a server. But what if we want to send some new data to our database instead?
+** CSS Challenge! **
 
 - Open up `index.html` and uncomment the form
 - Check that you can see an empty input box when you refresh your browser
+- Try and get the design looking as close as possible to the below before moving on:
+
+![](https://preview.ibb.co/d3Hz8F/Css_challenge.png)
+
+### Task 3
+
+So far, we've only been dealing with `GET`ting data from a server. But what if we want to send some new data to our database instead?
+
 - Create a new handler function for the endpoint `create-user`. What kind of **method** do you think you'll need? How will you access the data from your form?
 - The data from your form should be used to `INSERT` a new row into your `users` table
 - What response will you show the user to let them know their data has been successfully dealt with? (there's no right or wrong answer here, although it's best if you give the user some helpful feedback!)
