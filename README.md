@@ -20,7 +20,7 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 
 ### Task 1
 
-In `src/handler.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `static.js` file. You can change the data in `static.js` and check the results.
+In `src/router.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `handlers/static.js` file. You can change the data in `handlers/static.js` and check the results.
 
 In the terminal, connect to your database using `psql postgres://[username]:[password]@localhost:5432/[database]`.
 
@@ -28,7 +28,7 @@ Create a table called 'users' with three columns: 'id', 'name' and 'location' an
 
 **Hint: don't hard code the ids**
 
-Your job is to add to `db_connection.js` and refactor `handler.js` so that the response data comes from the users table in your database instead of from `static.js`.
+Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `handlers/static.js`.
 
 Once you've done this, move onto task 2.
 
@@ -45,7 +45,7 @@ Once you've done this, move onto task 2.
 
 So far, we've only been dealing with `GET`ting data from a server. But what if we want to send some new data to our database instead?
 
-- Create a new handler function for the endpoint `create-user`. What kind of **method** do you think you'll need? How will you access the data from your form?
+- Create a new handler function for the endpoint `create-user`. What kind of **method** do you think you'll need (check the HTML!)? How will you access the data from your form?
 - The data from your form should be used to `INSERT` a new row into your `users` table
 - What response will you show the user to let them know their data has been successfully dealt with? (there's no right or wrong answer here, although it's best if you give the user some helpful feedback!)
 

@@ -1,10 +1,11 @@
 const http = require('http');
-const users = require('./static.js');
+const users = require('./handlers/static.js');
 const fs = require('fs');
 const pg = require('pg');
-const getData = require('./getData.js');
+const getData = require('./handlers/getData.js');
+const postData = require('./handlers/postData.js');
 
-const handler = (request, response) => {
+const router = (request, response) => {
   const endpoint = request.url.split('/')[1];
 
   if (endpoint === '') {
@@ -27,6 +28,8 @@ const handler = (request, response) => {
         });
     response.end(output);
   });
+} else if (endpoint === "create-user") {
+
   } else {
     const fileName = request.url;
     const fileType = request.url.split(".")[1];
@@ -42,4 +45,4 @@ const handler = (request, response) => {
   }
 };
 
-module.exports = handler;
+module.exports = router;
