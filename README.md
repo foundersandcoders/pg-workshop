@@ -45,7 +45,7 @@ Once you've done this, move onto task 2.
 
 So far, we've only been dealing with `GET`ting data from a server. But what if we want to send some new data to our database instead?
 
-- Create a new handler function for the endpoint `create-user`. What kind of **method** do you think you'll need? How will you access the data from your form?
+- Create a new handler function for the endpoint `create-user`. What kind of **method** do you think you'll need (check the HTML!)? How will you access the data from your form?
 - The data from your form should be used to `INSERT` a new row into your `users` table
 - What response will you show the user to let them know their data has been successfully dealt with? (there's no right or wrong answer here, although it's best if you give the user some helpful feedback!)
 
