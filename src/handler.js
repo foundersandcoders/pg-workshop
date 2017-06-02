@@ -18,7 +18,7 @@ const handler = (request, response) => {
       }
     });
   } else if (endpoint === "users") {
-    // TASK 1: replace the 3 lines below below with your own function that gets data from your database
+    // Replace the 3 lines below below with your own function that gets data from your database
     output((err, res) => {
         if (err) throw err;
         let output = JSON.stringify(res);
