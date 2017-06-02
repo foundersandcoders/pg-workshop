@@ -1,6 +1,6 @@
 const dbConnection = require('../database/db_connection.js');
 
-const output = (cb) =>{
+const getData = (cb) =>{
     dbConnection.query(`SELECT * FROM users`
     , (err, res) => {
     if (err) cb(err);
@@ -8,4 +8,4 @@ const output = (cb) =>{
   });
 };
 
-module.exports = output;
+module.exports = getData;

@@ -2,7 +2,7 @@ const http = require('http');
 const users = require('./static.js');
 const fs = require('fs');
 const pg = require('pg');
-const output = require('./dynamic.js');
+const getData = require('./getData.js');
 
 const handler = (request, response) => {
   const endpoint = request.url.split('/')[1];
@@ -19,7 +19,7 @@ const handler = (request, response) => {
     });
   } else if (endpoint === "users") {
     // TASK 1: replace the 3 lines below below with your own function that gets data from your database
-    output((err, res) => {
+    getData((err, res) => {
         if (err) throw err;
         let output = JSON.stringify(res);
         response.writeHead(200,{
