@@ -1,10 +1,9 @@
 const http = require('http');
-const users = require('./static.js');
+const users = require('./handlers/static.js');
 const fs = require('fs');
 const pg = require('pg');
-const output = require('./dynamic.js');
 
-const handler = (request, response) => {
+const router = (request, response) => {
   const endpoint = request.url.split('/')[1];
 
   if (endpoint === '') {
@@ -42,4 +41,4 @@ const handler = (request, response) => {
   }
 };
 
-module.exports = handler;
+module.exports = router;
