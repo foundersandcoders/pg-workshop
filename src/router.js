@@ -18,14 +18,9 @@ const router = (request, response) => {
     });
   } else if (endpoint === "users") {
     // Replace the 3 lines below below with your own function that gets data from your database
-    output((err, res) => {
-        if (err) throw err;
-        let output = JSON.stringify(res);
-        response.writeHead(200,{
-          'content-type': 'application/json'
-        });
+    const output = JSON.stringify(users);
+    response.writeHead(200, {"Content-Type": "application/json"});
     response.end(output);
-  });
   } else {
     const fileName = request.url;
     const fileType = request.url.split(".")[1];
