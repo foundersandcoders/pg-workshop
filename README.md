@@ -16,7 +16,7 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 - Create a superuser with a password by typing `CREATE USER [the new username] WITH SUPERUSER PASSWORD '[the password of the database]';` (the password needs to be in quotes, otherwise you get an error).
 - Change ownership of the database to the new user by typing `ALTER DATABASE [name of the database] OWNER TO [the new username];`
 - Add a `config.env` file and add the database's url in this format:
-`DB_URL = postgres://[username]:[password]@localhost:5432/[database]`.
+`DB_URL = postgres://[username]:[password]@localhost:5432/[database]`. The database name needs to be in lower case.
 
 ### Task 1
 
