@@ -7,7 +7,6 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 - Clone this repo
 - Install the node_modules by typing `npm install` in your terminal.
 - Run `npm run dev`in your terminal and checkout the result at http://localhost:5000. This is the starting template for what you'll be building.
-- Install the npm modules `pg` and `env2`: `npm install --save pg env2`.
 
 ### Setting up the database
 
