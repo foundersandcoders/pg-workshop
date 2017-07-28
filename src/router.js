@@ -1,5 +1,5 @@
 const http = require('http');
-const users = require('./handlers/static.js');
+const users = require('./static.js');
 const fs = require('fs');
 const pg = require('pg');
 const getData = require('./handlers/getData.js');
