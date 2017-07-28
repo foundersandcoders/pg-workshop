@@ -25,7 +25,6 @@ In `src/router.js` you'll find a function that deals with calls to the `/users` 
 In the terminal, connect to your database using `psql postgres://[username]:[password]@localhost:5432/[database]`.
 
 Create a table called 'users' with three columns: 'id', 'name' and 'location' and add a couple of rows of dummy data.
-
 **Hint: don't hard code the ids**
 
 Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `handlers/static.js`.
