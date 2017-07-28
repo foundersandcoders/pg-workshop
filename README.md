@@ -29,8 +29,6 @@ Create a table called 'users' with three columns: 'id', 'name' and 'location' an
 
 Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `handlers/static.js`.
 
-Once you've done this, move onto task 2.
-
 ### Task 2
 ** CSS Challenge! **
 
