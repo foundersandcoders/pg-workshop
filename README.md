@@ -36,7 +36,7 @@ Your job is to add to `database/db_connection.js` and `handlers/getData.js` and 
 - Check that you can see an empty input box when you refresh your browser
 - Try and get the design looking as close as possible to the below before moving on:
 
-![css-challenge](https://cloud.githubusercontent.com/assets/20152018/26682632/16e851ec-46d9-11e7-8249-3df2dd1cb057.png)
+![css-challenge](https://user-images.githubusercontent.com/20152018/28717127-6a22b320-7398-11e7-895e-a0e4cc67ebf5.png)
 
 ### Task 3
 
