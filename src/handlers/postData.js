@@ -5,6 +5,8 @@ const postData = (userDetails, cb) => {
     if (err) {
       return cb(err);
     }
+    else {
     cb(null, res);
+  }
   })
 }
