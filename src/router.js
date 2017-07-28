@@ -29,7 +29,20 @@ const router = (request, response) => {
     response.end(output);
   });
 } else if (endpoint === "create-user") {
+  let data = '';
+    request.on('data', function(chunk) {
+      data+=chunk;
+    });
+    request.on('end', () => {
+      const name = queryString.parse(data).name;
+      const location = queryString.parse(data).location;
 
+      postData(name, location, (err, res) => {
+        if (err) console.log(err);
+        console.log('RES is', res);
+      });
+
+    });
   } else {
     const fileName = request.url;
     const fileType = request.url.split(".")[1];
