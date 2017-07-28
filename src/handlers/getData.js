@@ -4,7 +4,7 @@ const getData = (cb) =>{
     dbConnection.query(`SELECT * FROM users`
     , (err, res) => {
     if (err) cb(err);
-    cb(null, res.rows);
+    else cb(null, res.rows);
   });
 };
 
