@@ -1,13 +1,13 @@
 * {
-  font-family: helvetica;
+    font-family: helvetica;
 }
 
 body {
-  margin: 0;
+    margin: 0;
 }
 
 .nav-wrapper {
-  background-color: #ee6e73;
+    background-color: #ee6e73;
     height: 40px;
     box-shadow: 0px 4px 5px lightgrey;
     display: flex;
@@ -16,21 +16,21 @@ body {
 }
 
 .brand-logo {
-  text-decoration: none;
-color: white;
-font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
 }
 
 input {
-  border: none;
-  padding: 2%;
+    border: none;
+    padding: 2%;
     border-bottom: 1px solid lightgrey;
     margin-top: 2%;
-        font-size: 0.8rem;
+    font-size: 0.8rem;
 }
 
 .form {
-  display: flex;
+    display: flex;
     flex-direction: column;
     width: 50%;
     margin: 0 auto;
@@ -38,7 +38,7 @@ input {
 }
 
 button {
-  width: 13%;
+    width: 13%;
     height: 33px;
     margin-top: 4%;
     background-color: #ee6e73;
@@ -48,22 +48,22 @@ button {
 }
 
 th {
-      color: #ee6e73;
-      text-align: left;
-      border-bottom: 1px solid lightgrey;
+    color: #ee6e73;
+    text-align: left;
+    border-bottom: 1px solid lightgrey;
 }
 
 #users-table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .table-container {
-  width: 50%;
-margin: 0 auto;
-margin-top: 13%;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 13%;
 }
 
 tr {
-      height: 35px;
+    height: 35px;
 }
