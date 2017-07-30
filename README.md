@@ -33,7 +33,7 @@ Your job is to add to `database/db_connection.js` and `handlers/getData.js` and 
 
 So far, we've only been dealing with `GET`ting data from a server. But what if we want users to be able to add their details to our database?
 
-In the commented out form in `index.html` we have this HTML attribute: `action="create-user"`.
+In the commented out form in `index.html` we have this HTML attribute: `action="create-user"`. When a user clicks 'submit' on this form, the details they have entered will be sent in the payload to a 'create-user' endpoint. Let's make this endpoint now.
 
 1. Create a new handler function for the endpoint `create-user` in `router.js`. What kind of **method** do you think you'll need (check the HTML!)? How will you access the data from your form?
 - The data from your form should be used to `INSERT` a new row into your `users` table
