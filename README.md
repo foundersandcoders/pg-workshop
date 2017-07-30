@@ -11,7 +11,7 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 
 ### Task 1: Setting up the database
 
-We are currently hard-coding the data in to the application (`static.js`) because we don't have a database. Now we want to replace `static.js` with an actual database.
+We are currently hard-coding the data in to the application (`static.js`) because we don't have a database. Now we want to replace `static.js` with an actual database. Let's start by setting up the database we will connect to.
 
 1. Connect to postgres, by typing `psql` in the terminal on MAC, and `sudo -u postgres psql` on ubuntu.
 - Create the database by typing `CREATE DATABASE [the name of the database];`.
