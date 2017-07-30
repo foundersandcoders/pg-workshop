@@ -27,7 +27,7 @@ In the terminal, connect to your database using `psql postgres://[username]:[pas
 Create a table called 'users' with three columns: 'id', 'name' and 'location' and add a couple of rows of dummy data.
 **Hint: don't hard code the ids**
 
-Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `handlers/static.js`.
+Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `static.js`.
 
 ### Task 2
 
