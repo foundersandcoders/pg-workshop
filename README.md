@@ -33,19 +33,21 @@ Your job is to add to `database/db_connection.js` and `handlers/getData.js` and 
 
 So far, we've only been dealing with `GET`ting data from a server. But what if we want users to be able to add their details to our database?
 
-In the commented out form in `index.html` we have this HTML attribute: `action="create-user"`. When a user clicks 'submit' on this form, the details they have entered will be sent in the payload to a 'create-user' endpoint. Let's make this endpoint now.
+As we still don't have a visible form in the front end, only a developer can add to the database, either through `psql` in the command line, or by adding .sql files to this repo. Let's change that.
 
-1. Create a new handler function for the endpoint `create-user` in `router.js`. What kind of **method** do you think you'll need (check the HTML!)? How will you access the data from your form?
-- The data from your form should be used to `INSERT` a new row into your `users` table
-- What response will you show the user to let them know their data has been successfully dealt with? (there's no right or wrong answer here, although it's best if you give the user some helpful feedback!)
-
-### Task 4: CSS Challenge
-
-As we still don't have a visible form in the front end, only a developer can add users to the database, either through `psql` in the command line, or by adding .sql files to this repo. Let's change that.
+In the commented out form in `index.html` we have this HTML attribute: `action="create-user"`. When a user clicks 'submit' on this form, the details they have entered will be sent in the payload to a 'create-user' endpoint.
 
 1. Open up `index.html` and uncomment the form
 - Check that you can see an empty input box when you refresh your browser
-- Try and get the design looking as close as possible to the below before moving on:
+- Add a new endpoint to `router.js` (`/create-user`)
+- Create a new handler function for the endpoint `create-user` in `router.js` that uses the data from your form to INSERT a new row into your users table. What kind of **method** do you think you'll need (check the HTML!)? How will you access the data from your form?
+- Give the users of your website some helpful feedback, so they know that their data has been successfully dealt with.
+
+### Task 4: CSS Challenge
+
+Style it up!
+
+1. Try and get the design looking as close as possible to the below:
 
 ![css-challenge](https://user-images.githubusercontent.com/20152018/28717127-6a22b320-7398-11e7-895e-a0e4cc67ebf5.png)
 
