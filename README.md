@@ -12,6 +12,8 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 
 ### Setting up the database
 
+We are currently hard-coding the data in to the application (`static.js`) because we don't have a database. Now we want to replace `static.js` with an actual database.
+
 - Connect to postgres, by typing `psql` in the terminal on MAC, and `sudo -u postgres psql` on ubuntu.
 - Create the database by typing `CREATE DATABASE [the name of the database];`.
 - Create a superuser with a password by typing `CREATE USER [the new username] WITH SUPERUSER PASSWORD '[the password of the database]';` (the password needs to be in quotes, otherwise you get an error).
