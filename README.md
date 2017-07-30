@@ -1,12 +1,14 @@
 # pg-workshop
 
-In this workshop we'll be building on what we learnt in the [pg walkthrough](https://github.com/shiryz/pg-walkthrough). We'll be setting up our own database connection and using the data from a table of "users".
+In this workshop we'll be building on what we learnt in the [pg walkthrough](https://github.com/shiryz/pg-walkthrough). This app currently contains static data on users' name and location. We'll be setting up our own database connection so that the data can be retrieved from a table of "users" instead. We'll also want to write code that enables us to add new users via a form.
 
 ### Getting started
 
 - Clone this repo
 - Install the node_modules by typing `npm install` in your terminal.
 - Run `npm run dev`in your terminal and checkout the result at http://localhost:5000. This is the starting template for what you'll be building.
+- Add your own name and location within `static.js`.
+- Refresh the page & check the results
 
 ### Setting up the database
 
