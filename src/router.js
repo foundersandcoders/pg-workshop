@@ -1,8 +1,9 @@
 const http = require('http');
 const users = require('./static.js');
 const fs = require('fs');
+const pg = require('pg');
 
-const handler = (request, response) => {
+const router = (request, response) => {
   const endpoint = request.url.split('/')[1];
 
   if (endpoint === '') {
@@ -16,7 +17,7 @@ const handler = (request, response) => {
       }
     });
   } else if (endpoint === "users") {
-    // TASK 1: replace the 3 lines below below with your own function that gets data from your database
+    // Replace the 3 lines below below with your own function that gets data from your database
     const output = JSON.stringify(users);
     response.writeHead(200, {"Content-Type": "application/json"});
     response.end(output);
@@ -35,4 +36,4 @@ const handler = (request, response) => {
   }
 };
 
-module.exports = handler;
+module.exports = router;
