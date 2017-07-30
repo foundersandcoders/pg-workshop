@@ -4,7 +4,7 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 
 ### Getting started
 
-- Clone this repo
+1. Clone this repo
 - Install the node_modules by typing `npm install` in your terminal.
 - Run `npm run dev`in your terminal and checkout the result at http://localhost:5000. This is the starting template for what you'll be building.
 - Add your own name and location within `static.js`.
@@ -14,7 +14,7 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 
 We are currently hard-coding the data in to the application (`static.js`) because we don't have a database. Now we want to replace `static.js` with an actual database.
 
-- Connect to postgres, by typing `psql` in the terminal on MAC, and `sudo -u postgres psql` on ubuntu.
+1. Connect to postgres, by typing `psql` in the terminal on MAC, and `sudo -u postgres psql` on ubuntu.
 - Create the database by typing `CREATE DATABASE [the name of the database];`.
 - Create a superuser with a password by typing `CREATE USER [the new username] WITH SUPERUSER PASSWORD '[the password of the database]';` (the password needs to be in quotes, otherwise you get an error).
 - Change ownership of the database to the new user by typing `ALTER DATABASE [name of the database] OWNER TO [the new username];`
@@ -25,25 +25,24 @@ We are currently hard-coding the data in to the application (`static.js`) becaus
 
 In `src/router.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `static.js` file. You can add your own names and locations in `static.js`. Once you've done this, refresh the page and check the results.
 
+1. In the terminal, connect to your database using `psql postgres://[username]:[password]@localhost:5432/[database]`.
 
-In the terminal, connect to your database using `psql postgres://[username]:[password]@localhost:5432/[database]`.
-
-Create a table called 'users' with three columns: 'id', 'name' and 'location' and add a couple of rows of dummy data.
+- Create a table called 'users' with three columns: 'id', 'name' and 'location' and add a couple of rows of dummy data.
 **Hint: don't hard code the ids**
 
-Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `static.js`.
+- Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `static.js`.
 
 ### Task 3: Adding data to the database
 
 So far, we've only been dealing with `GET`ting data from a server. But what if we want to send some new data to our database instead?
 
-- Create a new handler function for the endpoint `create-user` in `router.js`. What kind of **method** do you think you'll need (check the HTML!)? How will you access the data from your form?
+1. Create a new handler function for the endpoint `create-user` in `router.js`. What kind of **method** do you think you'll need (check the HTML!)? How will you access the data from your form?
 - The data from your form should be used to `INSERT` a new row into your `users` table
 - What response will you show the user to let them know their data has been successfully dealt with? (there's no right or wrong answer here, although it's best if you give the user some helpful feedback!)
 
 ### Task 4: CSS Challenge
 
-- Open up `index.html` and uncomment the form
+1. Open up `index.html` and uncomment the form
 - Check that you can see an empty input box when you refresh your browser
 - Try and get the design looking as close as possible to the below before moving on:
 
