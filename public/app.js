@@ -19,9 +19,7 @@ function updateDom (err, data) {
     var users = JSON.parse(data);
     var table = document.getElementById("users-table");
     /* create a row in table for each user returned from DB */
-    console.log('hello', users);
     users.forEach(function(user) {
-      console.log('user is ', user);
       var row = document.createElement("tr");
       var name = document.createElement("td");
       name.innerHTML = user.name;
