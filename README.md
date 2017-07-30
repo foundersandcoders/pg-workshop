@@ -19,7 +19,7 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 
 ### Task 1
 
-In `src/router.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `handlers/static.js` file. You can add your own names and locations in `handlers/static.js`. Once you've done this, refresh the page and check the results.
+In `src/router.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `static.js` file. You can add your own names and locations in `static.js`. Once you've done this, refresh the page and check the results.
 
 
 In the terminal, connect to your database using `psql postgres://[username]:[password]@localhost:5432/[database]`.
