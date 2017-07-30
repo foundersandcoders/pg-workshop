@@ -26,12 +26,12 @@ We are currently hard-coding the data in to the application (`static.js`) becaus
 
 ### Task 2: Getting data from the database
 
-Your job now is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `static.js`.
+Your job now is to add to `database/db_connection.js` and `queries/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `static.js`.
 
 1. In the terminal, connect to your database using `psql postgres://[username]:[password]@localhost:5432/[database]`.
 1. Create a table called 'users' with three columns: 'id', 'name' and 'location' and add a couple of rows of dummy data. **Hint: don't hard code the ids**
-1. Inside `handlers/getData.js`, write a SQL query that pulls the necessary data from your database.
-1. Change the `/users` handler in `router.js` to call the `getData` query. **Note:** Line 6 of `handlers/getData.js` extracts the endpoint from our request (`const endpoint = request.url.split('/')[1];`).
+1. Inside `queries/getData.js`, write a SQL query that pulls the necessary data from your database.
+1. Change the `/users` handler in `router.js` to call the `getData` query. **Note:** Line 6 of `queries/getData.js` extracts the endpoint from our request (`const endpoint = request.url.split('/')[1];`).
 
 ### Task 3: Adding data to the database
 
