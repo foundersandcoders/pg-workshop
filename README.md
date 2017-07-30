@@ -33,13 +33,15 @@ Your job is to add to `database/db_connection.js` and `handlers/getData.js` and 
 
 So far, we've only been dealing with `GET`ting data from a server. But what if we want users to be able to add their details to our database?
 
-In the form we have this HTML attribute: `action="create-user"`.
+In the commented out form in `index.html` we have this HTML attribute: `action="create-user"`.
 
 1. Create a new handler function for the endpoint `create-user` in `router.js`. What kind of **method** do you think you'll need (check the HTML!)? How will you access the data from your form?
 - The data from your form should be used to `INSERT` a new row into your `users` table
 - What response will you show the user to let them know their data has been successfully dealt with? (there's no right or wrong answer here, although it's best if you give the user some helpful feedback!)
 
 ### Task 4: CSS Challenge
+
+As we still don't have a visible form in the front end, only a developer can add users to the database, either through `psql` in the command line, or by adding .sql files to this repo. Let's change that.
 
 1. Open up `index.html` and uncomment the form
 - Check that you can see an empty input box when you refresh your browser
