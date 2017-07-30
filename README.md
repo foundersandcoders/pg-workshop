@@ -22,7 +22,7 @@ We are currently hard-coding the data in to the application (`static.js`) becaus
 
 ### Task 2: Getting data from the database
 
-Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `static.js`.
+Your job now is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `static.js`.
 
 1. In the terminal, connect to your database using `psql postgres://[username]:[password]@localhost:5432/[database]`.
 - Create a table called 'users' with three columns: 'id', 'name' and 'location' and add a couple of rows of dummy data. **Hint: don't hard code the ids**
@@ -33,7 +33,7 @@ Your job is to add to `database/db_connection.js` and `handlers/getData.js` and 
 
 So far, we've only been dealing with `GET`ting data from a server. But what if we want users to be able to add their details to our database?
 
-As we still don't have a visible form in the front end, only a developer can add to the database, either through `psql` in the command line, or by adding .sql files to this repo. Let's change that.
+As we still don't have a visible form in the front end, only a developer can add to the database, either through `psql` in the command line, or by adding `.sql` files to this repo. Let's change that.
 
 In the commented out form in `index.html` we have this HTML attribute: `action="create-user"`. When a user clicks 'submit' on this form, the details they have entered will be sent in the payload to a 'create-user' endpoint.
 
