@@ -10,7 +10,7 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 - Add your own name and location within `static.js`.
 - Refresh the page & check the results
 
-### Setting up the database
+### Task 1: Setting up the database
 
 We are currently hard-coding the data in to the application (`static.js`) because we don't have a database. Now we want to replace `static.js` with an actual database.
 
@@ -21,7 +21,7 @@ We are currently hard-coding the data in to the application (`static.js`) becaus
 - Add a `config.env` file and add the database's url in this format:
 `DB_URL = postgres://[username]:[password]@localhost:5432/[database]`. The database name needs to be in lower case.
 
-### Task 1
+### Task 2: Getting data from the database
 
 In `src/router.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `static.js` file. You can add your own names and locations in `static.js`. Once you've done this, refresh the page and check the results.
 
@@ -33,7 +33,7 @@ Create a table called 'users' with three columns: 'id', 'name' and 'location' an
 
 Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `static.js`.
 
-### Task 2
+### Task 3: Adding data to the database
 
 So far, we've only been dealing with `GET`ting data from a server. But what if we want to send some new data to our database instead?
 
@@ -41,8 +41,7 @@ So far, we've only been dealing with `GET`ting data from a server. But what if w
 - The data from your form should be used to `INSERT` a new row into your `users` table
 - What response will you show the user to let them know their data has been successfully dealt with? (there's no right or wrong answer here, although it's best if you give the user some helpful feedback!)
 
-### Task 3
-** CSS Challenge! **
+### Task 4: CSS Challenge
 
 - Open up `index.html` and uncomment the form
 - Check that you can see an empty input box when you refresh your browser
