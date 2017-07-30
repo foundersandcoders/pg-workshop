@@ -31,6 +31,8 @@ In `src/router.js` you'll find a function that deals with calls to the `/users` 
 **Hint: don't hard code the ids**
 
 - Your job is to add to `database/db_connection.js` and `handlers/getData.js` and refactor `router.js` so that the response data comes from the users table in your database instead of from `static.js`.
+- Inside `handlers/getData.js`, write a SQL query that pulls the necessary data from your database.
+- Line 6 of `handlers/getData.js` extracts the endpoint from our request (`const endpoint = request.url.split('/')[1];`). Change the `/users` handler in `router.js` to call the `getData` query.
 
 ### Task 3: Adding data to the database
 
