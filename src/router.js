@@ -1,8 +1,11 @@
 const http = require('http');
 const users = require('./static.js');
 const fs = require('fs');
+const pg = require('pg');
+const getData = require('./handlers/getData.js');
+const postData = require('./handlers/postData.js');
 
-const handler = (request, response) => {
+const router = (request, response) => {
   const endpoint = request.url.split('/')[1];
 
   if (endpoint === '') {
@@ -17,9 +20,29 @@ const handler = (request, response) => {
     });
   } else if (endpoint === "users") {
     // TASK 1: replace the 3 lines below below with your own function that gets data from your database
-    const output = JSON.stringify(users);
-    response.writeHead(200, {"Content-Type": "application/json"});
+    getData((err, res) => {
+        if (err) throw err;
+        let output = JSON.stringify(res);
+        response.writeHead(200,{
+          'content-type': 'application/json'
+        });
     response.end(output);
+  });
+} else if (endpoint === "create-user") {
+  let data = '';
+    request.on('data', function(chunk) {
+      data+=chunk;
+    });
+    request.on('end', () => {
+      const name = queryString.parse(data).name;
+      const location = queryString.parse(data).location;
+
+      postData(name, location, (err, res) => {
+        if (err) console.log(err);
+        console.log('RES is', res);
+      });
+
+    });
   } else {
     const fileName = request.url;
     const fileType = request.url.split(".")[1];
@@ -35,4 +58,4 @@ const handler = (request, response) => {
   }
 };
 
-module.exports = handler;
+module.exports = router;
