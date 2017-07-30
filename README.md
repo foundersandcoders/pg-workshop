@@ -7,7 +7,7 @@ In this workshop we'll be building on what we learnt in the [pg walkthrough](htt
 1. Clone this repo
 - Install the node_modules by typing `npm install` in your terminal.
 - Run `npm run dev`in your terminal and checkout the result at http://localhost:5000. This is the starting template for what you'll be building.
-- In `src/router.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `static.js` file. Add your own name and location within `static.js`. Refresh the page & check the results
+- In `src/router.js` you'll find a function that deals with calls to the `/users` endpoint. The data is currently coming from the `static.js` file. Add your own name and location within `static.js`. Refresh the page & check the results.
 
 ### Task 1: Setting up the database
 
