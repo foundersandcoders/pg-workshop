@@ -11,6 +11,8 @@ const router = (request, response) => {
     fs.readFile(__dirname + "/../public/index.html", function(error, file) {
       if(error) {
         console.log(error);
+        response.writeHead(500, 'Content-Type:text/html');
+        response.end('<h1>Sorry, there was a problem loading the homepage</h1>');
         return;
       } else {
         response.end(file);
@@ -27,6 +29,8 @@ const router = (request, response) => {
     response.writeHead(200, {"Content-Type": "text/" + fileType});
     fs.readFile(__dirname + "/../public" + fileName, function(error, file) {
       if(error) {
+        response.writeHead(500, 'Content-Type:text/html');
+        response.end('<h1>Sorry, there was a problem loading this</h1>');
         console.log(error);
         return;
       } else {

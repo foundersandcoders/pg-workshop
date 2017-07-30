@@ -12,6 +12,8 @@ const router = (request, response) => {
     response.writeHead(200, { "Content-Type": "text/html" });
     fs.readFile(__dirname + "/../public/index.html", function(error, file) {
       if(error) {
+        response.writeHead(500, 'Content-Type:text/html');
+        response.end('<h1>Sorry, there was a problem loading the homepage</h1>');
         console.log(error);
         return;
       } else {
@@ -21,7 +23,11 @@ const router = (request, response) => {
   } else if (endpoint === "users") {
     // TASK 1: replace the 3 lines below below with your own function that gets data from your database
     getData((err, res) => {
-        if (err) throw err;
+        if (err) {
+          response.writeHead(500, 'Content-Type:text/html');
+          response.end('<h1>Sorry, there was a problem getting the users</h1>');
+          console.log(error);
+        };
         let output = JSON.stringify(res);
         response.writeHead(200,{
           'content-type': 'application/json'
@@ -38,8 +44,10 @@ const router = (request, response) => {
       const location = queryString.parse(data).location;
 
       postData(name, location, (err, res) => {
-        if (err) console.log(err);
-        console.log('RES is', res);
+        if (err) {
+          response.writeHead(500, 'Content-Type:text/html');
+          response.end('<h1>Sorry, there was a problem adding that user</h1>');
+          console.log(err)};
       });
 
     });
@@ -49,6 +57,8 @@ const router = (request, response) => {
     response.writeHead(200, {"Content-Type": "text/" + fileType});
     fs.readFile(__dirname + "/../public" + fileName, function(error, file) {
       if(error) {
+        response.writeHead(500, 'Content-Type:text/html');
+        response.end('<h1>Sorry, there was a problem loading this page</h1>');
         console.log(error);
         return;
       } else {
