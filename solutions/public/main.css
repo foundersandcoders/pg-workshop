@@ -1,0 +1,71 @@
+/*Add styling below*/
+
+* {
+    font-family: helvetica;
+}
+
+body {
+    margin: 0;
+}
+
+.nav-wrapper {
+    background-color: #ee6e73;
+    height: 40px;
+    box-shadow: 0px 4px 5px lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+input {
+    border: none;
+    padding: 2%;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 2%;
+    font-size: 0.8rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 7%;
+}
+
+button {
+    width: 13%;
+    height: 33px;
+    margin-top: 4%;
+    background-color: #ee6e73;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+}
+
+th {
+    color: #ee6e73;
+    text-align: left;
+    border-bottom: 1px solid lightgrey;
+}
+
+#users-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-container {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 13%;
+}
+
+tr {
+    height: 35px;
+}
