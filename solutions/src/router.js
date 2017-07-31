@@ -10,14 +10,14 @@ const router = (request, response) => {
     const endpoint = request.url.split('/')[1];
 
     if (endpoint === '') {
-        response.writeHead(200, {
-            "Content-Type": "text/html"
-        });
         fs.readFile(__dirname + "/../public/index.html", function(error, file) {
             if (error) {
                 console.log(error);
                 return;
             } else {
+              response.writeHead(200, {
+                  "Content-Type": "text/html"
+              });
                 response.end(file);
             }
         });
@@ -57,14 +57,14 @@ const router = (request, response) => {
     } else {
         const fileName = request.url;
         const fileType = request.url.split(".")[1];
-        response.writeHead(200, {
-            "Content-Type": "text/" + fileType
-        });
         fs.readFile(__dirname + "/../public" + fileName, function(error, file) {
             if (error) {
                 console.log(error);
                 return;
             } else {
+              response.writeHead(200, {
+                  "Content-Type": "text/" + fileType
+              });
                 response.end(file);
             }
         });
