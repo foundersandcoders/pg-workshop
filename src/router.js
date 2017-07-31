@@ -9,8 +9,9 @@ const router = (request, response) => {
     if (endpoint === '') {
         fs.readFile(__dirname + "/../public/index.html", function(error, file) {
             if (error) {
-                console.log(error);
-                return;
+              response.writeHead(500, 'Content-Type:text/html');
+              response.end('<h1>Sorry, there was a problem loading the homepage</h1>');
+              console.log(error);
             } else {
               response.writeHead(200, {
                   "Content-Type": "text/html"
@@ -30,8 +31,9 @@ const router = (request, response) => {
         const fileType = request.url.split(".")[1];
         fs.readFile(__dirname + "/../public" + fileName, function(error, file) {
             if (error) {
-                console.log(error);
-                return;
+              response.writeHead(500, 'Content-Type:text/html');
+              response.end('<h1>Sorry, there was a problem loading this page</h1>');
+              console.log(error);
             } else {
               response.writeHead(200, {
                   "Content-Type": "text/" + fileType
