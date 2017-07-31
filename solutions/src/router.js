@@ -4,6 +4,7 @@ const fs = require('fs');
 const pg = require('pg');
 const getData = require('./queries/getData.js');
 const postData = require('./queries/postData.js');
+const queryString = require('querystring');
 
 const router = (request, response) => {
   const endpoint = request.url.split('/')[1];
@@ -36,12 +37,18 @@ const router = (request, response) => {
     request.on('end', () => {
       const name = queryString.parse(data).name;
       const location = queryString.parse(data).location;
-
       postData(name, location, (err, res) => {
         if (err) console.log(err);
-        console.log('RES is', res);
       });
-
+      response.writeHead(200, { "Content-Type": "text/html" });
+      fs.readFile(__dirname + "/../public/index.html", function(error, file) {
+        if(error) {
+          console.log(error);
+          return;
+        } else {
+          response.end(file);
+        }
+      });
     });
   } else {
     const fileName = request.url;
