@@ -14,7 +14,7 @@ const serverError = (err, response) => {
 const homeHandler = response => {
   const filepath = path.join(__dirname, '..', 'public', 'index.html');
   readFile(filepath, (err, file) => {
-    if (err) serverError(err, response);
+    if (err) return serverError(err, response);
     response.writeHead(200, { 'Content-Type': 'text/html' });
     response.end(file);
   });
@@ -22,7 +22,7 @@ const homeHandler = response => {
 
 const getUsersHandler = response => {
   getData((err, users) => {
-    if (err) serverError(err, response);
+    if (err) return serverError(err, response);
     response.writeHead(200, { 'Content-Type': 'application/json' });
     response.end(JSON.stringify(users));
   });
@@ -36,7 +36,7 @@ const postUserHandler = (request, response) => {
   request.on('end', () => {
     const { name, location } = qs.parse(data);
     postData(name, location, err => {
-      if (err) serverError(err, response);
+      if (err) return serverError(err, response);
       homeHandler(response);
     });
   });
@@ -45,7 +45,7 @@ const postUserHandler = (request, response) => {
 const publicHandler = (url, response) => {
   const filepath = path.join(__dirname, '..', url);
   readFile(filepath, (err, file) => {
-    if (err) serverError(err, response);
+    if (err) return serverError(err, response);
     const [, extension] = url.split('.');
     const extensionType = {
       html: 'text/html',
