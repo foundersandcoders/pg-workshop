@@ -43,6 +43,14 @@ In the commented out form in `index.html` we have this HTML attribute: `action="
 1.  Add a new endpoint to `router.js` (`/create-user`)
 1.  Create a new handler function for the endpoint `create-user` in `handlers.js` that uses the data from your form to INSERT a new row into your users table. What kind of **method** do you think you'll need (check the HTML!)? How will you access the data from your form?
 
+### Task 4: CSS Challenge
+
+Style it up!
+
+1. Try and get the design looking as close as possible to the below:
+
+![css-challenge](https://user-images.githubusercontent.com/20152018/28717127-6a22b320-7398-11e7-895e-a0e4cc67ebf5.png)
+
 ## Bonus
 
 Customise your app!
