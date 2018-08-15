@@ -14,7 +14,7 @@ function request(url, cb) {
 
 function updateDom(err, data) {
   if (err) {
-    console.log(err);
+    console.error(err);
   } else {
     var users = JSON.parse(data);
     var table = document.getElementById('users-table');
