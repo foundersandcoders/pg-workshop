@@ -37,8 +37,8 @@ const postUserHandler = (request, response) => {
     const { name, location } = qs.parse(data);
     postData(name, location, err => {
       if (err) return serverError(err, response);
-      res.writeHead(302, { 'Location': '/' });
-      res.end()
+      response.writeHead(302, { 'Location': '/' });
+      response.end()
     });
   });
 };
