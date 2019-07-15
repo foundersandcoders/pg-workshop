@@ -30,9 +30,3 @@ In the commented out form in `index.html` we have this attribute: `action="creat
 1.  Open up `index.html` and uncomment the form
 1.  Add a new endpoint to `router.js` (`/create-user`)
 1.  Create a handler for the endpoint `create-user` in `handlers.js` that uses the data from your form to insert a new row into your users table.
-
-## Stretch goals
-
-1.  Add some new columns to your `users` table
-1.  Try and handle different types on input on the client side (e.g. boolean values or longer text input)
-1.  Validate input to check that the user does not already exist
