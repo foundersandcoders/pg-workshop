@@ -1,1 +1,64 @@
 /*Add styling below*/
+* {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5vh;
+  width: 100vw;
+  background-color: #ee6e73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.form {
+  width: 50vw;
+}
+
+input {
+  color: grey;
+  border: none;
+  width: 50vw;
+  height: 2rem;
+  border-bottom: 1px solid grey;
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  color: #e5e5e5;
+  font-size: 1.2rem;
+}
+
+button {
+  border: none;
+  height: 2.75rem;
+  background-color: #ee6e73;
+  color: white;
+  font-weight: bold;
+}
+
+table {
+  width: 50vw;
+}

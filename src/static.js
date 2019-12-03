@@ -1,10 +1,10 @@
 module.exports = [
   {
-    name: 'Emily',
-    location: 'London'
+    name: "Dan",
+    location: "Turnpike Lane"
   },
   {
-    name: 'Shireen',
-    location: 'Nazareth'
+    name: "Jamie",
+    location: "Sydenham"
   }
 ];

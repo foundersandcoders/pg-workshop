@@ -5,10 +5,10 @@ function request(url, cb) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       cb(null, xhr.responseText);
     } else {
-      cb('error' + xhr.responseType);
+      cb("error" + xhr.responseType);
     }
   };
-  xhr.open('GET', url, true);
+  xhr.open("GET", url, true);
   xhr.send();
 }
 
@@ -17,14 +17,14 @@ function updateDom(err, data) {
     console.error(err);
   } else {
     var users = JSON.parse(data);
-    var table = document.getElementById('users-table');
+    var table = document.getElementById("users-table");
     /* create a row in table for each user returned from DB */
     users.forEach(function(user) {
-      var row = document.createElement('tr');
-      var name = document.createElement('td');
+      var row = document.createElement("tr");
+      var name = document.createElement("td");
       name.innerHTML = user.name;
       row.appendChild(name);
-      var location = document.createElement('td');
+      var location = document.createElement("td");
       location.innerHTML = user.location;
       row.appendChild(location);
       table.appendChild(row);
@@ -32,4 +32,4 @@ function updateDom(err, data) {
   }
 }
 
-request('/users', updateDom);
+request("/users", updateDom);
